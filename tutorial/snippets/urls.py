@@ -26,6 +26,8 @@ urlpatterns = [
     # 用Hyperlink的方式写url  
 ]
 '''
+
+'''
 snippet_list = SnippetViewSet.as_view({
     'get':'list',
     'post':'create',
@@ -59,6 +61,7 @@ urlpatterns = format_suffix_patterns([
     path('users/', user_list,name='user-list'),
     path('users/<int:pk>/', user_detail, name='user-detail')
 ])
+'''
 
 '''
 urlpatterns = format_suffix_patterns([
