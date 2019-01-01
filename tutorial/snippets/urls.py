@@ -84,4 +84,9 @@ path('snippets/<int:pk>/', views.snippet_detail),
 #urlpatterns = format_suffix_patterns(urlpatterns)
 
 # 加上了权限功能，这样页面上可以看到登录的选项
-urlpatterns += [path('api-auth/', include('rest_framework.urls')),]
+#urlpatterns += [path('api-auth/', include('rest_framework.urls')),]
+
+# 所有带有关系的
+urlpatterns = [
+    path('', include('music.urls'))
+]
